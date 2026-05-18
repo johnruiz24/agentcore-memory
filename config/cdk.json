@@ -1,5 +1,5 @@
 {
-  "app": "npx ts-node --prefer-ts-exts --project config/tsconfig.json bin/agentcore-shared-memory-poc.ts",
+  "app": "npx ts-node --prefer-ts-exts bin/agentcore-shared-memory-poc.ts",
   "context": {
     "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
     "@aws-cdk/core:checkSecretUsage": true,

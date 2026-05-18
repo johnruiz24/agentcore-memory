@@ -9,7 +9,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "tsc --pretty false",
+    "build": "tsc --pretty false --project config/tsconfig.json",
     "lint": "eslint bin lib test --ext .ts",
     "test": "jest --runInBand",
     "e2e": "jest --runInBand test/e2e-contract.test.ts",
