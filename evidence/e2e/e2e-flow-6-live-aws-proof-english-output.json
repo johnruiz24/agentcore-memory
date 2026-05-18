@@ -1,0 +1,12 @@
+Waiting 95s...
+{
+  "runUtc": "2026-04-21T14:47:22.453408+00:00",
+  "sessionId": "live-proof-en-59dfc0bc889a43e8b2654ce852388268",
+  "actorId": "operator-live-proof-en-002",
+  "writerRequestId": "65a1b416-1313-4491-92dc-fd24a13d6359",
+  "readerRequestId": "83b26931-f4d1-42d8-929c-0696e00d90d7",
+  "writerSummary": "# Program Facts & Objectives\n\n**Ownership & Leadership**\n- Owner: Platform Cost Engineering\n- Incident Commander: Dana Ruiz\n\n**Mitigation Strategy**\n- Retry cap: 3 attempts\n- Cache duration: 15 minutes\n\n**Risk & Constraints**\n- Residual risk: 4.2%\n- Constraint: Do not modify stable runtimes",
+  "readerAnswer": "Based on the provided memory:\n\n- **Owner:** Platform Cost Engineering team\n- **Commander:** Dana Ruiz\n- **Mitigation:** Retry cap set to 3 attempts; Cache duration configured for 15 minutes\n- **Residual Risk Percent:** 4.2%\n- **Hard Constraint:** Do not modify stable runtimes",
+  "readerRetrievedCount": 6,
+  "directRetrieveCount": 6
+}

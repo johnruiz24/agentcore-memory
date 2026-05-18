@@ -1,0 +1,42 @@
+{
+  "name": "feat-agentic-memory",
+  "version": "1.0.0",
+  "description": "<!-- > [!NOTE] > The content presented here serves as an example intended solely for educational objectives and should not be implemented in a live production environment without proper modifications and rigorous testing. -->",
+  "main": "dist/bin/agentcore-shared-memory-poc.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc --pretty false",
+    "lint": "eslint bin lib test --ext .ts",
+    "test": "jest --runInBand",
+    "e2e": "jest --runInBand test/e2e-contract.test.ts",
+    "smoke": "node scripts/smoke/synth-smoke.mjs",
+    "synth": "npx aws-cdk synth",
+    "deploy": "npx aws-cdk deploy --require-approval never"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-cdk-lib": "^2.250.0",
+    "constructs": "^10.6.0",
+    "source-map-support": "^0.5.21"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.6.0",
+    "@typescript-eslint/eslint-plugin": "^8.58.2",
+    "@typescript-eslint/parser": "^8.58.2",
+    "aws-cdk": "^2.1118.3",
+    "eslint": "^10.2.1",
+    "jest": "^30.3.0",
+    "ts-jest": "^29.4.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "private": true,
+  "types": "dist/bin/agentcore-shared-memory-poc.d.ts"
+}

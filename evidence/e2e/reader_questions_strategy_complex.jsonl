@@ -1,0 +1,5 @@
+{"type":"broad","question":"Produce an executive summary of the incident and rollout governance, including constraints, owners, approval authority, and readiness posture."}
+{"type":"broad","question":"Summarize, at a program level, what changed, why it changed, and what must be true before scaling deployment."}
+{"type":"specific","question":"What exact retry cap and cache duration were implemented, and what is the quantified residual risk percentage mentioned in the memory?"}
+{"type":"specific","question":"Name the incident commander, the approval body, and all numeric acceptance thresholds exactly as documented."}
+{"type":"specific","question":"State the canary region and duration, then list the three quantitative targets with their inequalities or bounds."}

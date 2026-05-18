@@ -1,0 +1,3 @@
+{"question":"Construct an executive-grade risk brief that includes: hard constraints, root cause, mitigation actions, quantified residual risk, and a recommendation on whether phased rollout should proceed after the 24-hour canary."}
+{"question":"Who owns the program and who had incident command authority, what governance body approves rollout, and which quantitative success criteria must be met before broad release?"}
+{"question":"Given the documented mitigation and residual risk, explain the tradeoff between cost control and data freshness, and propose a monitoring decision rule that remains consistent with the stated constraints and targets."}

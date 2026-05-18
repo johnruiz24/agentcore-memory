@@ -1,59 +1,341 @@
-# Contributing Guidelines
+# Contributing Guide
 
-Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional
-documentation, we greatly value feedback and contributions from our community.
-
-Please read through this document before submitting any issues or pull requests to ensure we have all the necessary
-information to effectively respond to your bug report or contribution.
-
-
-## Reporting Bugs/Feature Requests
-
-We welcome you to use the GitHub issue tracker to report bugs or suggest features.
-
-When filing an issue, please check existing open, or recently closed, issues to make sure somebody else hasn't already
-reported the issue. Please try to include as much information as you can. Details like these are incredibly useful:
-
-* A reproducible test case or series of steps
-* The version of our code being used
-* Any modifications you've made relevant to the bug
-* Anything unusual about your environment or deployment
-
-
-## Contributing via Pull Requests
-Contributions via pull requests are much appreciated. Before sending us a pull request, please ensure that:
-
-1. You are working against the latest source on the *main* branch.
-2. You check existing open, and recently merged, pull requests to make sure someone else hasn't addressed the problem already.
-3. You open an issue to discuss any significant work - we would hate for your time to be wasted.
-
-To send us a pull request, please:
-
-1. Fork the repository.
-2. Modify the source; please focus on the specific change you are contributing. If you also reformat all the code, it will be hard for us to focus on your change.
-3. Ensure local tests pass.
-4. Commit to your fork using clear commit messages.
-5. Send us a pull request, answering any default questions in the pull request interface.
-6. Pay attention to any automated CI failures reported in the pull request, and stay involved in the conversation.
-
-GitHub provides additional document on [forking a repository](https://help.github.com/articles/fork-a-repo/) and
-[creating a pull request](https://help.github.com/articles/creating-a-pull-request/).
-
-
-## Finding contributions to work on
-Looking at the existing issues is a great way to find something to contribute on. As our projects, by default, use the default GitHub issue labels (enhancement/bug/duplicate/help wanted/invalid/question/wontfix), looking at any 'help wanted' issues is a great place to start.
-
+Thank you for your interest in contributing to Agentic Memory! This guide outlines the process for contributing code, documentation, and improvements.
 
 ## Code of Conduct
-This project has adopted the [Amazon Open Source Code of Conduct](https://aws.github.io/code-of-conduct).
-For more information see the [Code of Conduct FAQ](https://aws.github.io/code-of-conduct-faq) or contact
-opensource-codeofconduct@amazon.com with any additional questions or comments.
 
+We are committed to providing a welcoming and inclusive environment. Please treat all contributors with respect.
 
-## Security issue notifications
-If you discover a potential security issue in this project we ask that you notify AWS/Amazon Security via our [vulnerability reporting page](http://aws.amazon.com/security/vulnerability-reporting/). Please do **not** create a public github issue.
+## Getting Started
 
+### 1. Fork the Repository
 
-## Licensing
+```bash
+git clone https://github.com/your-username/agentcore-memory.git
+cd agentcore-memory
+```
 
-See the [LICENSE](LICENSE) file for our project's licensing. We will ask you to confirm the licensing of your contribution.
+### 2. Create a Feature Branch
+
+```bash
+git checkout -b feat/my-feature
+# or
+git checkout -b fix/my-bug
+# or
+git checkout -b docs/my-documentation
+```
+
+### 3. Set Up Development Environment
+
+```bash
+npm install
+npm run dev
+npm test
+```
+
+## Development Workflow
+
+### Code Style
+
+- **TypeScript:** Strict mode enabled
+- **Formatting:** Prettier (automatic on save)
+- **Linting:** ESLint configuration provided
+- **Imports:** Absolute imports using `@/` alias
+
+### Running Tests
+
+```bash
+# Run all tests
+npm test
+
+# Run specific test suite
+npm test -- src/memory
+
+# Run with coverage
+npm test -- --coverage
+
+# Run in watch mode
+npm test -- --watch
+```
+
+### Type Checking
+
+```bash
+npm run type-check
+
+# Should produce no errors
+```
+
+### Building
+
+```bash
+npm run build
+
+# Output goes to ./dist
+```
+
+## Creating a Pull Request
+
+### Before Submitting
+
+- [ ] Fork the repository
+- [ ] Create feature branch from `main`
+- [ ] Make changes and commit (see Commit Guidelines below)
+- [ ] Run tests: `npm test`
+- [ ] Run linting: `npm run lint`
+- [ ] Run type check: `npm run type-check`
+- [ ] Update documentation if needed
+- [ ] Rebase on latest main: `git rebase main`
+
+### Commit Guidelines
+
+Use conventional commit format:
+
+```
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+```
+
+**Types:**
+- `feat` - New feature
+- `fix` - Bug fix
+- `docs` - Documentation only
+- `style` - Code style changes (no logic)
+- `refactor` - Code refactor (no logic change)
+- `perf` - Performance improvement
+- `test` - Test changes
+- `chore` - Build/tool changes
+
+**Examples:**
+```
+feat(memory): add semantic search capability
+fix(auth): resolve OAuth callback bug
+docs(setup): clarify AWS configuration steps
+test(memory): add integration tests for DynamoDB
+```
+
+### Opening PR
+
+1. Push your branch: `git push origin feat/my-feature`
+2. Open GitHub PR from your fork to `main`
+3. Fill out the PR template:
+
+```markdown
+## Description
+Brief description of changes
+
+## Type of Change
+- [ ] Bug fix
+- [ ] New feature
+- [ ] Breaking change
+- [ ] Documentation update
+
+## Testing
+Describe testing performed
+
+## Checklist
+- [ ] Tests pass
+- [ ] Linting passes
+- [ ] Types check
+- [ ] Documentation updated
+- [ ] Committed with conventional format
+```
+
+## Reporting Issues
+
+### Bug Report
+
+```markdown
+## Description
+Clear description of the bug
+
+## Steps to Reproduce
+1. Step one
+2. Step two
+3. ...
+
+## Expected Behavior
+What should happen
+
+## Actual Behavior
+What actually happens
+
+## Environment
+- OS: [e.g., macOS 12]
+- Node.js: [e.g., 18.0.0]
+- npm: [e.g., 9.0.0]
+
+## Additional Context
+Screenshots, logs, etc.
+```
+
+### Feature Request
+
+```markdown
+## Description
+Clear description of desired feature
+
+## Use Case
+Why this feature is needed
+
+## Proposed Implementation
+How you think it should work
+
+## Alternatives Considered
+Other approaches considered
+```
+
+## Code Review Process
+
+### What We Look For
+
+1. **Functionality** - Does the code do what it claims?
+2. **Tests** - Is there appropriate test coverage?
+3. **Documentation** - Are changes documented?
+4. **Performance** - Any performance implications?
+5. **Security** - Any security concerns?
+6. **Style** - Does it follow project conventions?
+
+### Responding to Reviews
+
+- Be respectful and professional
+- Explain your reasoning
+- Request clarification if unclear
+- Update code based on feedback
+- Push new commits (don't force push during review)
+
+## Testing Guidelines
+
+### Test Structure
+
+```typescript
+describe('MemoryService', () => {
+  describe('capture', () => {
+    it('should store interaction in DynamoDB', async () => {
+      const memory = new MemoryService();
+      const result = await memory.capture({
+        sessionId: 'test-123',
+        interaction: { input: 'test', output: 'test' }
+      });
+      expect(result.id).toBeDefined();
+    });
+  });
+});
+```
+
+### Test Coverage
+
+- Aim for 80%+ coverage
+- Test happy paths and error cases
+- Mock external dependencies
+- Use meaningful test names
+
+### Integration Tests
+
+```bash
+# Run integration tests (requires AWS credentials)
+npm run test:integration
+
+# Run against LocalStack
+npm run test:integration -- --local
+```
+
+## Documentation Standards
+
+### Code Comments
+
+Only write comments for the "why", not the "what":
+
+```typescript
+// Good: Explains business logic
+// We retry on network errors but not auth errors
+if (error.code === 'NETWORK') {
+  await retry();
+}
+
+// Bad: States the obvious
+// Check if error code is NETWORK
+if (error.code === 'NETWORK') {
+```
+
+### Documentation Files
+
+- Use clear, concise language
+- Include examples where helpful
+- Link to related documentation
+- Keep formatting consistent
+
+### API Documentation
+
+Use JSDoc for public APIs:
+
+```typescript
+/**
+ * Store an agent interaction in persistent memory
+ * @param interaction - The interaction to store
+ * @returns Promise resolving to stored memory record
+ * @throws {ValidationError} if interaction is invalid
+ * @example
+ * const memory = await service.capture({
+ *   sessionId: 'user-123',
+ *   interaction: { input: 'hello', output: 'hi' }
+ * });
+ */
+async capture(interaction: Interaction): Promise<Memory>
+```
+
+## Performance Considerations
+
+When contributing performance-sensitive code:
+
+1. Benchmark before/after
+2. Document performance implications
+3. Avoid unnecessary allocations
+4. Use efficient algorithms (O(log n) preferred over O(n²))
+5. Profile with real data volumes
+
+## Security Considerations
+
+- Never commit secrets or credentials
+- Sanitize user inputs
+- Use parameterized queries
+- Keep dependencies updated
+- Report security issues privately
+
+## Helpful Resources
+
+- [ARCHITECTURE.md](./ARCHITECTURE.md) - System design
+- [SETUP.md](./SETUP.md) - Development setup
+- [EXAMPLES.md](./EXAMPLES.md) - Code examples
+- [AWS SDK Documentation](https://docs.aws.amazon.com/sdk-for-javascript/)
+
+## Release Process
+
+### Version Numbering
+
+We follow [Semantic Versioning](https://semver.org/):
+- `MAJOR.MINOR.PATCH` (e.g., `1.2.3`)
+- MAJOR: Breaking changes
+- MINOR: New features (backward compatible)
+- PATCH: Bug fixes
+
+### Creating a Release
+
+1. Update version in `package.json`
+2. Update `CHANGELOG.md`
+3. Commit: `chore: release v1.2.3`
+4. Create Git tag: `git tag v1.2.3`
+5. Push and create GitHub release
+
+## Community
+
+- **Discussions:** GitHub Discussions
+- **Issues:** GitHub Issues
+- **Email:** [maintainer email]
+
+## Thanks!
+
+Your contributions help make Agentic Memory better for everyone. We appreciate your effort!
