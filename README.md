@@ -1,5 +1,7 @@
 # Agent Core Runtime with Persistent Memory
 
+![Hero Banner](./docs/images/hero-banner.jpg)
+
 > **Production-ready reference implementation for AI agents with enterprise memory management, OAuth2 identity, and semantic retrieval on AWS Bedrock**
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)

@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"\\\\\\nmkdir -p docs && \\\\\\nmv -v CODE_OF_CONDUCT.md CONTRIBUTING.md SETUP.md EXAMPLES.md reference.md docs/ 2>&1 | grep -E \\\"^'.+'\\\" && \\\\\\necho \\\"✅ Doc files moved\\\"\",\"description\":\"Move do...",
+  "error": "Exit code 1",
+  "timestamp": "2026-05-18T20:32:29.777Z",
+  "retry_count": 2
+}
