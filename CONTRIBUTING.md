@@ -336,6 +336,19 @@ We follow [Semantic Versioning](https://semver.org/):
 - **Issues:** GitHub Issues
 - **Email:** [maintainer email]
 
+## Contributors
+
+### Core Team
+- **John Ruiz** — Project lead, core architecture
+- **Daniel Zilberman** — Memory service, DynamoDB integration
+- **Sergio Barraza** — Identity service, OAuth2 integration
+- **Salman Ahmed** — Testing framework, CI/CD
+- **Anindith Reddy Bujala** — Documentation, examples
+- **Ravi Vatsavai** — Performance optimization
+
+### Contributors
+We appreciate all contributions! See [GitHub Contributors](https://github.com/johnruiz24/agentcore-memory/graphs/contributors) for a complete list.
+
 ## Thanks!
 
 Your contributions help make Agentic Memory better for everyone. We appreciate your effort!
